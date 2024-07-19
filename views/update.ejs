@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input{
+            width: 200px;
+            height: 25px;
+            border: none;
+            outline: none;
+            padding: 4px;
+            background-color: rgb(59, 58, 58);
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-top: 50px;
+            color: white;
+        }
+        button{
+            width: 120px;
+            padding: 5px;
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        input::placeholder{
+            color: rgb(129, 123, 123);
+        }
+
+    </style>
+</head>
+<body>
+    
+<div class="main" style="background-color: black; width: 100%; min-height: 100vh; padding: 20px; ">
+ 
+<h1 style="margin-left: 40px; margin-top: 40px; color: white;">Update User</h1>
+
+    <form action="/update/<%=user._id%>" method="post">
+
+<input type="text" placeholder="Name" name="name" value="<%=user.name%>">
+
+<input type="text" placeholder="Email" name="email" value="<%=user.email%>">
+
+<input type="text" placeholder="Image Url" name="image" value="<%=user.image%>">
+    
+<button type="submit" style="background-color: yellow; color: black;">Update User</button>
+
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
